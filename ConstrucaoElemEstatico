@@ -1,0 +1,42 @@
+//Exemplo
+	public class Aplicacao {
+		public static void main (String[] args) {
+	
+	}
+}
+//Significa que os elementos ou atributos, pertencem à classe e não aos objetos da classe.
+//Criando uma nova classe
+	public class Matematica {
+
+	/*O atributo static tem que ser inserido antes do retorno do método
+	Podendo ser static public ou public static não importa a ordem
+	Somente precisa estar antes do int*/
+
+		public static int somar (int a, int b) {
+			return a + b;
+		}
+		public static int subtrair (int a, int b) {
+			return a – b;
+		}
+	}
+//Chamando o método
+	public class Aplicacao {
+		public static void main (String[] args) {
+
+	/*Quando feito a inserção do atributo static no elemento acima
+	Não é necessário a utilização de objeto (código abaixo)	
+	Para a chamada do método*/
+
+		/*Matematica m = new Matematica();
+		int soma = m.somar(10, 5);                                pode dispensar este objeto
+		int subtracao = m.subtrair(50, 10);*/                  após inserir o elemento static
+
+		//E agora usar esta nova chamada de método
+		int soma = Matematica.somar(10, 5);
+		int subtracao = Matematica.subtrair(50, 10);	
+
+		System.out.println (soma);
+		System.out.println (subtracao);
+	}
+}
+
